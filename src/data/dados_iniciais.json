@@ -1,0 +1,172 @@
+{
+  "categorias": [
+    {
+      "titulo": "Inteligência Artificial",
+      "cor": "#6BD1FF",
+      "link_extra": {
+        "text": "História da I.A",
+        "url": "https://www.youtube.com/watch?v=Lhu8bdmkMCM"
+      },
+      "videos": [
+        {
+          "titulo": "E Agora? Nova Inteligência Artificial Começou a Programar Sozinha",
+          "url": "https://www.youtube.com/watch?v=KdgKQoq1jk0&t=230s"
+        },
+        {
+          "titulo": "Inteligência Artificial - IBM",
+          "url": "https://www.youtube.com/watch?v=W95YlM5-iPk"
+        },
+        {
+          "titulo": "Por que a Inteligência Artificial não é um bando de IF-ELSE?",
+          "url": "https://www.youtube.com/watch?v=F0Iby7KCXls"
+        },
+        {
+          "titulo": "As TOP 5 Linguagens para INTELIGÊNCIA ARTIFICIAL e MACHINE LEARNING (2019) // Vlog #97",
+          "url": "https://www.youtube.com/watch?v=wD5lpZI6jeY"
+        },
+        {
+          "titulo": "Qual a diferença entre Inteligência Artificial, Machine Learning, Data Science, Deep Learning, etc?",
+          "url": "https://www.youtube.com/watch?v=ccZ2pyr3YDw"
+        },
+        {
+          "titulo": "Você consegue passar no teste de turing?",
+          "url": "https://www.youtube.com/watch?v=zIZ-FmmEWyw"
+        },
+        {
+          "titulo": "Agentes inteligêntes",
+          "url": "https://www.youtube.com/watch?v=PuJ-HpPWyl0"
+        },
+        {
+          "titulo": "Inteligência Artificial tem consciência?",
+          "url": "https://www.youtube.com/watch?v=h1ZZfoZofrM"
+        }        
+      ]
+    },
+    {
+      "titulo": "BI e Big Data",
+      "cor": "#00C86F",
+      "videos": [
+        {
+          "titulo": "Big Data // Dicionário do Programador",
+          "url": "https://www.youtube.com/watch?v=IpfE8B9H9cI"
+        },
+        {
+          "titulo": "BI VS BIG DATA",
+          "url": "https://www.youtube.com/watch?v=lPzDdf62x3U"
+        },
+        {
+          "titulo": "O que é Big Data - Conceitos básicos",
+          "url": "https://www.youtube.com/watch?v=JPC5mE9iI0I"
+        },
+        {
+          "titulo": "O QUE É E DIFERENÇAS ENTRE BUSINESS INTELLIGENCE, DATA ANALYTICS, E DATA SCIENTIST",
+          "url": "https://www.youtube.com/watch?v=jIBsYAw5kng"
+        }, 
+        {
+          "titulo": "DICAS DE FERRAMENTAS NOS RELATÓRIOS DO POWER BI",
+          "url": "https://www.youtube.com/watch?v=6EEwNFhhIJE"
+        }
+      ]
+    },
+    {
+      "titulo": "Cloud Computing",
+      "cor": "orange",
+      "videos": [
+        {
+          "titulo": "Você sabe o que é Cloud Computing, ou Computação na Nuvem?",
+          "url": "https://www.youtube.com/watch?v=FDFejm-ovtI&t=83s"
+        },
+        {
+          "titulo": "Entenda a Cloud Pública, Privada e Híbrida",
+          "url": "https://www.youtube.com/watch?v=Xu7KJY09NNY"
+        },
+        {
+          "titulo": "Cloud Computing (Computação em Nuvem) // Dicionário do Programador",
+          "url": "https://www.youtube.com/watch?v=97l0Ahu2efE"
+        },
+        {
+          "titulo": "Você sabe o que é SaaS, PaaS e IaaS?",
+          "url": "https://www.youtube.com/watch?v=Ikobn2ixJGI"
+        }
+      ]
+    },
+    {
+      "titulo": "Internet das Coisas",
+      "cor": "#6b5be2",
+      "videos": [
+        {
+          "titulo": "AFINAL O QUE É INTERNET DAS COISAS? (IoT) Entenda de uma vez por todas",
+          "url": "https://www.youtube.com/watch?v=QtjFedAEXus"
+        },
+        {
+          "titulo": "https://www.youtube.com/watch?v=qZTMrj_w2Hk",
+          "url": "https://www.youtube.com/watch?v=qZTMrj_w2Hk"
+        },
+        {
+          "titulo": "Inovações brasileiras em Internet das Coisas [CT Startup]",
+          "url": "https://www.youtube.com/watch?v=gizj4empiTE"
+        },
+        {
+          "titulo": "Diferença entre Automação Residencial e Internet das Coisas",
+          "url": "https://www.youtube.com/watch?v=W_3PrphSH2Q"
+        },
+        {
+          "titulo": "Top 10 IoT(Internet Of Things) Projects Of All Time | 2018",
+          "url": "https://www.youtube.com/watch?v=QL-6PdiDTeo"
+        }
+      ]
+    },
+    {
+      "titulo": "Desenvolvimento Web e Mobile",
+      "cor": "#9cd33b",
+      "videos": [
+        {
+          "titulo": "Angular vs React vs Vue - A Batalha dos Frameworks!!!",
+          "url": "https://www.youtube.com/watch?v=VmmA5SFN2WM&t=2072s"
+        },
+        {
+          "titulo": "5 Frameworks JavaScript Reativos para Conhecer // Vlog #79",
+          "url": "https://www.youtube.com/watch?v=LOiW_s22tFM"
+        },
+        {
+          "titulo": "Programando Aplicativos Mobile: IONIC VS REACT NATIVE | Qual Framework usar?",
+          "url": "https://www.youtube.com/watch?v=aFSScX-LGnc"
+        },
+        {
+          "titulo": "O que é uma Progressive Web App (PWA)? #HipstersPontoTube",
+          "url": "https://www.youtube.com/watch?v=UeMkXvmk68Q"
+        }
+      ]
+    },
+    {
+      "titulo": "API Rest",
+      "cor": "red",
+      "videos": [
+        {
+          "titulo": "REST // Dicionário do Programador",
+          "url": "https://www.youtube.com/watch?v=S7MduKwvVGk"
+        },
+        {
+          "titulo": "Web Services (O que é, motivos para uso, como funciona, protocolos SOAP/REST)",
+          "url": "https://www.youtube.com/watch?v=RlB5wcuFvcc"
+        },
+        {
+          "titulo": "O que é API? REST e RESTful? | Mayk Brito",
+          "url": "https://www.youtube.com/watch?v=ghTrp1x_1As"
+        },
+        {
+          "titulo": "Como o GraphQL vai substituir o REST?",
+          "url": "https://www.youtube.com/watch?v=jyinO6YxLBc"
+        },
+        {
+          "titulo": "É REST ou RESTful? Entenda de uma vez por todas a diferença!",
+          "url": "https://www.youtube.com/watch?v=r62JVRAeqyk"
+        },
+        {
+          "titulo": "Requisitando dados de endereço com Javascript - Requisitando dados na API",
+          "url": "https://www.youtube.com/watch?v=WnMRMyZFOZs"
+        }
+      ]
+    }
+  ]
+}
