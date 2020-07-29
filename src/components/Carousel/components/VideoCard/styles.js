@@ -20,7 +20,13 @@ export const VideoCardContainer = styled.a`
   padding: 16px;
 
   transition: opacity .3s;
-  &:hover,
+  transition: transform 0.5s;
+
+  &:hover{
+    transform: scale(1.2);
+    z-index: 1;
+  }
+
   &:focus {
     opacity: .5;
   }

@@ -20,10 +20,10 @@ const Container = styled.ul`
   }
   
   .slick-prev {
-    left: 0;
+    left: 5px;
   }
   .slick-next {
-    right: 16px;
+    right: 5px;
   }
 `;
 
