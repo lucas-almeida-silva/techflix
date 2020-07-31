@@ -2,14 +2,14 @@
     "categorias": [
         {
             "id": 1,
-            "nome": "Front End",
-            "descricao": "Uma categoria show",
+            "nome": "Robótica",
+            "descricao": "Robótica com arduino e raspberry",
             "cor": "#cbd1ff"
         },
         {
             "id": 2,
-            "nome": "Back End",
-            "descricao": "Outra categoria show",
+            "nome": "Inovações Tecnológicas",
+            "descricao": "Inovações em todos os campos da TI",
             "cor": "#cbd1ff"
         }      
     ]
