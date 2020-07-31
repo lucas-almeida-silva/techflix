@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import CadastroVideo from './Pages/cadastro/Video';
 import CadastroCategoria from './Pages/cadastro/Categoria';
 import PageDefault from './components/PageDefault';
+import { ToastContainer } from 'react-toastify';
 
 const Pagina404 = () => (
   <PageDefault>
@@ -22,6 +23,7 @@ ReactDOM.render(
       <Route path="/cadastro/categoria" component={CadastroCategoria} exact />
       <Route component={Pagina404} />
     </Switch>
+    <ToastContainer />
   </BrowserRouter>,
   document.getElementById('root')
 );

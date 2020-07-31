@@ -1,18 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import Loader from '../../../components/Loader';
 
 function CadastroCategoria() {
+  const URL = window.location.hostname.includes('localhost')
+  ? 'http://localhost:8080/categorias'
+  : 'https://tech-flix.herokuapp.com/categorias';
+
   const valoresIniciais = {
-    nome: '',
+    titulo: '',
     descricao: '',
     cor: '',
   };
 
   const [categorias, setCategorias] = useState([]);
   const [values, setValues] = useState(valoresIniciais);
+  const [loader, setLoader] = useState(false);
 
   function setValue(chave, valor) {
     setValues({
@@ -29,33 +36,65 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const URL = 'http://localhost:8080/categorias';
-    fetch(URL)
-    .then(async(resp) => {
-      const resposta = await resp.json();
-      setCategorias([
-        ...resposta
-      ])
-    })
+    setLoader(true);
+    setTimeout(() => {
+      fetch(URL)
+      .then(async(resp) => {
+        const resposta = await resp.json();
+        setCategorias([
+          ...resposta
+        ])
+        setLoader(false);
+      })
+    }, 600);
   }, []);
 
+  async function handleSubmit(event) {
+    setLoader(true);
+    event.preventDefault();
+  
+    const request = {
+      method: 'POST',
+      body: JSON.stringify(values),
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    };
+    
+    setTimeout(() => {
+      fetch(URL, request)
+      .then(resp => {
+        setLoader(false);
+  
+        if(resp.ok){
+          setCategorias([...categorias, values]);
+          setValues(valoresIniciais);
+  
+          toast.success("Cadastro realizado com sucesso!");
+        } else {
+          toast.error("Ocorreu um erro ao salvar os dados")
+        }
+      })
+    }, 1000) 
+  }
+
   return (
+    <>
     <PageDefault>
+
+      {loader && ( 
+        <Loader />
+      )}
+
       <h1>Cadastro de Categoria</h1>
 
-      <form onSubmit={function handleSubmit(event) {
-        event.preventDefault();
-
-        setCategorias([...categorias, values]);
-        setValues(valoresIniciais);
-      }}
-      >
+      <form onSubmit={handleSubmit}>
 
         <FormField
           label="Nome da categoria"
           type="text"
-          name="nome"
-          value={values.nome}
+          name="titulo"
+          value={values.titulo}
           onChange={handleChange}
         />
 
@@ -85,8 +124,8 @@ function CadastroCategoria() {
 
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>
-            {categoria.nome}
+          <li key={`${categoria.titulo}`}>
+            {categoria.titulo}
           </li>
         ))}
       </ul>
@@ -96,6 +135,7 @@ function CadastroCategoria() {
       </Link>
 
     </PageDefault>
+    </>
   );
 }
 

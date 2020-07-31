@@ -1,16 +1,40 @@
 {
-    "categorias": [
-        {
-            "id": 1,
-            "nome": "Robótica",
-            "descricao": "Robótica com arduino e raspberry",
-            "cor": "#cbd1ff"
-        },
-        {
-            "id": 2,
-            "nome": "Inovações Tecnológicas",
-            "descricao": "Inovações em todos os campos da TI",
-            "cor": "#cbd1ff"
-        }      
-    ]
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "Inteligência Artificial",
+      "descricao": "Tudo sobre I.A",
+      "cor": "#6BD1FF"
+    },
+    {
+      "id": 2,
+      "titulo": "BI e Big Data",
+      "descricao": "Entende as aplicações e diferenças entre BI e BIG Data",
+      "cor": "#00C86F"
+    },
+    {
+      "id": 3,
+      "titulo": "Cloud Computing",
+      "descrição": "Desvendando a Computação em Nuvem",
+      "cor": "orange"
+    },
+    {
+      "id": 4,
+      "titulo": "Internet das Coisas",
+      "descrição": "Diversas aplicações de IoT",
+      "cor": "#6b5be2"
+    },
+    {
+      "id": 5,
+      "titulo": "Desenvolvimento Web e Mobile",
+      "descrição": "Principais linguagens e frameworks para desenvolvimento WEB e Mobile",
+      "cor": "#9cd33b"
+    },
+    {
+      "id": 6,
+      "titulo": "API Rest",
+      "descrição": "Aprenda os conceitos sobre API Rest e suas aplicações",
+      "cor": "red"
+    }
+  ]
 }
