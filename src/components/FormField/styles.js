@@ -7,6 +7,10 @@ export const FormFieldWrapper = styled.div`
     min-height: 150px;
   }
 
+  select {
+    padding-left:12px;
+  }
+
   input {
     padding-top: 20px;
   }
@@ -49,7 +53,7 @@ export const Input = styled.input`
   border-top: 4px solid transparent;
   border-bottom: 4px solid #53585D;
   
-  padding: 16px 16px;
+  padding: 16px 16px 10px;
   margin-bottom: 45px;
 
   resize: none;

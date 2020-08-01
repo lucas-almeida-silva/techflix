@@ -14,12 +14,11 @@ function CadastroVideo() {
 
   const [loader, setLoader] = useState(false);
   const [categorias, setCategorias] = useState([]);
-  const categoryTitles = categorias.map(({ titulo }) => titulo)
 
-  const { values, handleChange, clearForm } = useForm({
+  const { values, handleChange } = useForm({
     titulo: '',
     url: '',
-    categoria: '',
+    categoria: 0,
   });
 
   useEffect(() => {
@@ -32,18 +31,12 @@ function CadastroVideo() {
 
   function handleSubmit(event) {
     event.preventDefault();
-
-    const categoriaEscolhida = categorias.find(categoria => categoria.titulo === values.categoria);
-
-    if(!categoriaEscolhida) {
-      toast.error('Categoria inválida! Selecione uma categoria na lista.');
-      return;
-    }
+    setLoader(true);
 
     videosRepository.create({
       titulo: values.titulo,
       url: values.url,
-      categoriaId: categoriaEscolhida.id,
+      categoriaId: Number(values.categoria)
     })
     .then(() => {
       history.push('/');
@@ -51,7 +44,8 @@ function CadastroVideo() {
     })
     .catch((err) => {
       toast.error(err.message)
-    });
+    })
+    .finally(setLoader(false));
   }
 
   return (
@@ -78,12 +72,19 @@ function CadastroVideo() {
         />
 
         <FormField
+          type="select"
           label="Categoria"
           name="categoria"
           value={values.categoria}
           onChange={handleChange}
-          suggestions={categoryTitles}
-        />
+        >
+          <option hidden></option>
+          {
+            categorias.map(categoria => (
+              <option value={categoria.id} key={categoria.id}>{categoria.titulo}</option>
+            ))
+          }
+        </FormField>
 
         <Button background="darkblue" type="submit">Cadastrar</Button>
         <Button as={Link} to="/">Voltar</Button>

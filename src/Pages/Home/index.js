@@ -29,7 +29,7 @@ function Home() {
       {loader && (<Loader />)}
 
       {dadosIniciais.map((categoria, indice) => {
-        if(indice == 0) {
+        if(indice === 0) {
           return (
             <div key={categoria.id}>
               <BannerMain

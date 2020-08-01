@@ -47,7 +47,7 @@ function CadastroCategoria() {
     .catch((err) => {
       toast.error(err.message)
     })
-    .finally(() => setLoader(false));
+    .finally(setLoader(false));
   }
 
   return (
