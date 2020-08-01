@@ -87,7 +87,7 @@ function CadastroVideo() {
 
         <Button background="darkblue" type="submit">Cadastrar</Button>
         <Button as={Link} to="/">Voltar</Button>
-        <Button as={Link} to="/cadastro/categoria" float="right">Cadastrar Categorias</Button>
+        <Button as={Link} to="/cadastro/categoria" float="right">Categorias</Button>
       
       </form>
 
