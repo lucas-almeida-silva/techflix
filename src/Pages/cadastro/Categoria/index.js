@@ -1,90 +1,60 @@
 import React, { useState, useEffect } from 'react';
-import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import Loader from '../../../components/Loader';
+import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
-  const URL = window.location.hostname.includes('localhost')
-  ? 'http://localhost:8080/categorias'
-  : 'https://tech-flix.herokuapp.com/categorias';
-
   const valoresIniciais = {
     titulo: '',
     descricao: '',
     cor: '',
   };
 
-  const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(valoresIniciais);
+  const { handleChange, values, clearForm } = useForm(valoresIniciais);
+  
   const [loader, setLoader] = useState(false);
-
-  function setValue(chave, valor) {
-    setValues({
-      ...values,
-      [chave]: valor,
-    });
-  }
-
-  function handleChange(event) {
-    setValue(
-      event.target.getAttribute('name'),
-      event.target.value,
-    );
-  }
-
+  const [categorias, setCategorias] = useState([]);
+ 
   useEffect(() => {
     setLoader(true);
-    setTimeout(() => {
-      fetch(URL)
-      .then(async(resp) => {
-        const resposta = await resp.json();
-        setCategorias([
-          ...resposta
-        ])
-        setLoader(false);
+    categoriasRepository.getAll()
+      .then((categorias) => {
+        setCategorias(categorias);
       })
-    }, 600);
+      .catch(() => toast.error('Ocorreu um erro ao buscar as categorias'))
+      .finally(setLoader(false));
   }, []);
 
-  async function handleSubmit(event) {
-    setLoader(true);
+  function handleSubmit(event) {
     event.preventDefault();
-  
-    const request = {
-      method: 'POST',
-      body: JSON.stringify(values),
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    };
-    
-    setTimeout(() => {
-      fetch(URL, request)
-      .then(resp => {
-        setLoader(false);
-  
-        if(resp.ok){
-          setCategorias([...categorias, values]);
-          setValues(valoresIniciais);
-  
-          toast.success("Cadastro realizado com sucesso!");
-        } else {
-          toast.error("Ocorreu um erro ao salvar os dados")
-        }
-      })
-    }, 1000) 
+    setLoader(true);
+
+    categoriasRepository.create({
+      titulo: values.titulo,
+      descricao: values.descricao,
+      cor: values.cor
+    })
+    .then(() => {
+      setCategorias([...categorias, values]);
+      clearForm();
+      toast.success('Cadastro realizado com sucesso!');
+    })
+    .catch((err) => {
+      toast.error(err.message)
+    })
+    .finally(() => setLoader(false));
   }
 
   return (
     <>
     <PageDefault>
 
-      {loader && ( 
-        <Loader />
-      )}
+      {loader && ( <Loader /> )}
 
       <h1>Cadastro de Categoria</h1>
 
@@ -114,14 +84,10 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <Button>Cadastrar</Button>
+        <Button type="submit">Cadastrar</Button>
 
       </form>
-
-      {categorias.length === 0 && (
-        <div>LoadinG...</div>
-      )}
-
+      
       <ul>
         {categorias.map((categoria) => (
           <li key={`${categoria.titulo}`}>

@@ -11,6 +11,7 @@ function Carousel({
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
   const videos = category.videos;
+  const hasVideos = Boolean(category.videos.length);
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
@@ -25,23 +26,33 @@ function Carousel({
           }
         </>
       )}
-      <Slider>
-        {videos.map((video, index) => {
-          if (ignoreFirstVideo && index === 0) {
-            return null;
-          }
 
-          return (
-            <SliderItem key={video.titulo}>
-              <VideoCard
-                videoTitle={video.titulo}
-                videoURL={video.url}
-                categoryColor={categoryColor}
-              />
-            </SliderItem>
-          );
-        })}
-      </Slider>
+      {
+        hasVideos ? (
+          <Slider>
+            {videos.map((video, index) => {
+              if (ignoreFirstVideo && index === 0) {
+                return null;
+              }
+
+              return (
+                <SliderItem key={video.titulo}>
+                  <VideoCard
+                    videoTitle={video.titulo}
+                    videoURL={video.url}
+                    categoryColor={categoryColor}
+                  />
+                </SliderItem>
+              );
+            })}
+          </Slider>
+        ) : 
+        (
+          <h1>Não há vídeos para essa categoria</h1>
+        )
+       
+      }
+
     </VideoCardGroupContainer>
   );
 }

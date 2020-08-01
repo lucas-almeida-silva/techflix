@@ -32,7 +32,7 @@ export const VideoCardContainer = styled.a`
   &:focus :nth-child(1){
     opacity: 1;
     transform: translateY(0);
-	}
+  }
   
   &:not(:first-child) {
     margin-left: 20px;

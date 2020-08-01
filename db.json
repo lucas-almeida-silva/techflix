@@ -36,5 +36,200 @@
       "descrição": "Aprenda os conceitos sobre API Rest e suas aplicações",
       "cor": "red"
     }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "E Agora? Nova Inteligência Artificial Começou a Programar Sozinha",
+      "descricao": "Turma, o dia chegou: uma Inteligência Artificial que entende requisitos escritos em linguagem natural e converte isto em código",
+      "url": "https://www.youtube.com/watch?v=KdgKQoq1jk0&t=230s"
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "Inteligência Artificial - IBM",
+      "url": "https://www.youtube.com/watch?v=W95YlM5-iPk"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "Por que a Inteligência Artificial não é um bando de IF-ELSE?",
+      "url": "https://www.youtube.com/watch?v=F0Iby7KCXls"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "As TOP 5 Linguagens para INTELIGÊNCIA ARTIFICIAL e MACHINE LEARNING (2019) // Vlog #97",
+      "url": "https://www.youtube.com/watch?v=wD5lpZI6jeY"
+    },
+    {
+      "id": 5,
+      "categoriaId": 1,
+      "titulo": "Qual a diferença entre Inteligência Artificial, Machine Learning, Data Science, Deep Learning, etc?",
+      "url": "https://www.youtube.com/watch?v=ccZ2pyr3YDw"
+    },
+    {
+      "id": 6,
+      "categoriaId": 1,
+      "titulo": "Você consegue passar no teste de turing?",
+      "url": "https://www.youtube.com/watch?v=zIZ-FmmEWyw"
+    },
+    {
+      "id": 7,
+      "categoriaId": 1,
+      "titulo": "Agentes inteligêntes",
+      "url": "https://www.youtube.com/watch?v=PuJ-HpPWyl0"
+    },
+    {
+      "id": 8,
+      "categoriaId": 1,
+      "titulo": "Inteligência Artificial tem consciência?",
+      "url": "https://www.youtube.com/watch?v=h1ZZfoZofrM"
+    },
+    {
+      "id": 9,
+      "categoriaId": 2,
+      "titulo": "Big Data // Dicionário do Programador",
+      "url": "https://www.youtube.com/watch?v=IpfE8B9H9cI"
+    },
+    {
+      "id": 10,
+      "categoriaId": 2,
+      "titulo": "BI VS BIG DATA",
+      "url": "https://www.youtube.com/watch?v=lPzDdf62x3U"
+    },
+    {
+      "id": 10,
+      "categoriaId": 2,
+      "titulo": "O que é Big Data - Conceitos básicos",
+      "url": "https://www.youtube.com/watch?v=JPC5mE9iI0I"
+    },
+    {
+      "id": 11,
+      "categoriaId": 2,
+      "titulo": "O QUE É E DIFERENÇAS ENTRE BUSINESS INTELLIGENCE, DATA ANALYTICS, E DATA SCIENTIST",
+      "url": "https://www.youtube.com/watch?v=jIBsYAw5kng"
+    },
+    {
+      "id": 12,
+      "categoriaId": 2,
+      "titulo": "DICAS DE FERRAMENTAS NOS RELATÓRIOS DO POWER BI",
+      "url": "https://www.youtube.com/watch?v=6EEwNFhhIJE"
+    },
+    {
+      "id": 13,
+      "categoriaId": 3,
+      "titulo": "Você sabe o que é Cloud Computing, ou Computação na Nuvem?",
+      "url": "https://www.youtube.com/watch?v=FDFejm-ovtI&t=83s"
+    },
+    {
+      "id": 14,
+      "categoriaId": 3,
+      "titulo": "Entenda a Cloud Pública, Privada e Híbrida",
+      "url": "https://www.youtube.com/watch?v=Xu7KJY09NNY"
+    },
+    {
+      "id": 15,
+      "categoriaId": 3,
+      "titulo": "Cloud Computing (Computação em Nuvem) // Dicionário do Programador",
+      "url": "https://www.youtube.com/watch?v=97l0Ahu2efE"
+    },
+    {
+      "id": 16,
+      "categoriaId": 3,
+      "titulo": "Você sabe o que é SaaS, PaaS e IaaS?",
+      "url": "https://www.youtube.com/watch?v=Ikobn2ixJGI"
+    },
+    {
+      "id": 17,
+      "categoriaId": 4,
+      "titulo": "AFINAL O QUE É INTERNET DAS COISAS? (IoT) Entenda de uma vez por todas",
+      "url": "https://www.youtube.com/watch?v=QtjFedAEXus"
+    },
+    {
+      "id": 18,
+      "categoriaId": 4,
+      "titulo": "Você precisa conhecer a Arduino IOT Cloud! A Internet das Coisas fácil!",
+      "url": "https://www.youtube.com/watch?v=qZTMrj_w2Hk"
+    },
+    {
+      "id": 19,
+      "categoriaId": 4,
+      "titulo": "Inovações brasileiras em Internet das Coisas [CT Startup]",
+      "url": "https://www.youtube.com/watch?v=gizj4empiTE"
+    },
+    {
+      "id": 20,
+      "categoriaId": 4,
+      "titulo": "Diferença entre Automação Residencial e Internet das Coisas",
+      "url": "https://www.youtube.com/watch?v=W_3PrphSH2Q"
+    },
+    {
+      "id": 21,
+      "categoriaId": 4,
+      "titulo": "Top 10 IoT(Internet Of Things) Projects Of All Time | 2018",
+      "url": "https://www.youtube.com/watch?v=QL-6PdiDTeo"
+    },
+    {
+      "id": 22,
+      "categoriaId": 5,
+      "titulo": "Angular vs React vs Vue - A Batalha dos Frameworks!!!",
+      "url": "https://www.youtube.com/watch?v=VmmA5SFN2WM&t=2072s"
+    },
+    {
+      "id": 23,
+      "categoriaId": 5,
+      "titulo": "5 Frameworks JavaScript Reativos para Conhecer // Vlog #79",
+      "url": "https://www.youtube.com/watch?v=LOiW_s22tFM"
+    },
+    {
+      "id": 24,
+      "categoriaId": 5,
+      "titulo": "Programando Aplicativos Mobile: IONIC VS REACT NATIVE | Qual Framework usar?",
+      "url": "https://www.youtube.com/watch?v=aFSScX-LGnc"
+    },
+    {
+      "id": 25,
+      "categoriaId": 5,
+      "titulo": "O que é uma Progressive Web App (PWA)? #HipstersPontoTube",
+      "url": "https://www.youtube.com/watch?v=UeMkXvmk68Q"
+    },
+    {
+      "id": 26,
+      "categoriaId": 6,
+      "titulo": "REST // Dicionário do Programador",
+      "url": "https://www.youtube.com/watch?v=S7MduKwvVGk"
+    },
+    {
+      "id": 27,
+      "categoriaId": 6,
+      "titulo": "Web Services (O que é, motivos para uso, como funciona, protocolos SOAP/REST)",
+      "url": "https://www.youtube.com/watch?v=RlB5wcuFvcc"
+    },
+    {
+      "id": 28,
+      "categoriaId": 6,
+      "titulo": "O que é API? REST e RESTful? | Mayk Brito",
+      "url": "https://www.youtube.com/watch?v=ghTrp1x_1As"
+    },
+    {
+      "id": 29,
+      "categoriaId": 6,
+      "titulo": "Como o GraphQL vai substituir o REST?",
+      "url": "https://www.youtube.com/watch?v=jyinO6YxLBc"
+    },
+    {
+      "id": 30,
+      "categoriaId": 6,
+      "titulo": "É REST ou RESTful? Entenda de uma vez por todas a diferença!",
+      "url": "https://www.youtube.com/watch?v=r62JVRAeqyk"
+    },
+    {
+      "id": 31,
+      "categoriaId": 6,
+      "titulo": "Requisitando dados de endereço com Javascript - Requisitando dados na API",
+      "url": "https://www.youtube.com/watch?v=WnMRMyZFOZs"
+    }
   ]
 }
