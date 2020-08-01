@@ -18,6 +18,16 @@ const Container = styled.ul`
       font-size: 30px;
     }
   }
+  .slick-dots {
+    li{
+      button{
+        &:before{
+          color: var(--primary);
+          top: 5px;
+        }
+      }
+    }
+  }  
   
   .slick-prev {
     left: 5px;
@@ -41,7 +51,7 @@ export const SliderItem = styled.li`
 const Slider = ({ children }) => (
   <Container>
     <SlickSlider {...{
-      dots: false,
+      dots: true,
       infinite: true,
       speed: 300,
       centerMode: false,

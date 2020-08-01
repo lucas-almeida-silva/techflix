@@ -10,8 +10,11 @@ const Main = styled.main`
     padding-top: 50px;
     padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: 2%;
     ${({paddingAll}) => css`
-        padding: ${paddingAll}
+        padding-top: ${paddingAll};
+        padding-left: ${paddingAll};
+        padding-right: ${paddingAll}
     `}
 `; 
 

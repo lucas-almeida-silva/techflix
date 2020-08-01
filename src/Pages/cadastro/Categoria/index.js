@@ -84,10 +84,11 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <Button type="submit">Cadastrar</Button>
+      <Button background="darkblue" type="submit">Cadastrar</Button>
+      <Button as={Link} to="/">Voltar</Button>
 
       </form>
-      
+
       <ul>
         {categorias.map((categoria) => (
           <li key={`${categoria.titulo}`}>
@@ -95,10 +96,6 @@ function CadastroCategoria() {
           </li>
         ))}
       </ul>
-
-      <Link to="/">
-        Ir para a home
-      </Link>
 
     </PageDefault>
     </>
