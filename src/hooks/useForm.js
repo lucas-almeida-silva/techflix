@@ -35,12 +35,11 @@ export default function useForm({valoresIniciais, validate}) {
     }
 
     function markAllAsTouched() {
+      const newTouched = {}
       Object.keys(values).forEach((key)=>{
-        setTouchedFields({
-          ...touched,
-          [key]: true,
-        });
-      });     
+        newTouched[key] = true;
+      });    
+      setTouchedFields(newTouched); 
     }
 
     function clearForm() {
