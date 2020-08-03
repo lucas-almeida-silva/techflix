@@ -2,6 +2,7 @@ import styled , { css } from 'styled-components';
 
 export const FormFieldWrapper = styled.div`
   position: relative;
+  margin-bottom: 30px;
 
   textarea {
     min-height: 150px;
@@ -54,7 +55,7 @@ export const Input = styled.input`
   border-bottom: 4px solid #53585D;
   
   padding: 16px 16px 10px;
-  margin-bottom: 45px;
+  margin-bottom: 5px;
 
   resize: none;
   border-radius: 4px;
@@ -75,4 +76,8 @@ export const Input = styled.input`
     }
     `;
   }}
+`;
+
+export const ErrorMessage = styled.span`
+  color: #FF0000;
 `;

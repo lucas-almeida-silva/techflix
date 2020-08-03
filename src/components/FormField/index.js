@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormFieldWrapper, Label, Input } from './styles';
+import { FormFieldWrapper, Label, Input, ErrorMessage } from './styles';
 
 function FormField({
-  label, type, name, value, onChange, children
+  label, type, name, onBlur, onChange, value, error, children
 }) {
   const fieldId = `id_${name}`;
   const isTextArea = type === 'textarea';
@@ -21,15 +21,20 @@ function FormField({
           value={value}
           name={name}
           hasValue={hasValue}
+          onBlur={onBlur}
           onChange={onChange}
           autoComplete='off'
         >
           {children}
         </Input>
-
+ 
         <Label.Text>
           {label}
         </Label.Text>
+
+        {error && (
+          <ErrorMessage>{error}</ErrorMessage>
+        )}
         
       </Label>
     </FormFieldWrapper>
@@ -39,7 +44,9 @@ function FormField({
 FormField.defaultProps = {
   type: 'text',
   value: '',
+  error: '',
   onChange: () => {},
+  onBlur: () => {},
   list: []
 };
 
@@ -47,8 +54,10 @@ FormField.propTypes = {
   label: PropTypes.string.isRequired,
   type: PropTypes.string,
   name: PropTypes.string.isRequired,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onBlur: PropTypes.func,
   onChange: PropTypes.func,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  error: PropTypes.string,
 };
 
 export default FormField;

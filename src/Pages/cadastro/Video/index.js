@@ -12,14 +12,33 @@ import categoriasRepository from '../../../repositories/categorias';
 function CadastroVideo() {
   const history = useHistory();
 
-  const [loader, setLoader] = useState(false);
-  const [categorias, setCategorias] = useState([]);
-
-  const { values, handleChange } = useForm({
+  const valoresIniciais = {
     titulo: '',
     url: '',
     categoria: 0,
-  });
+  }
+
+  function validate(values) {
+    const errors = {};
+
+    if(!values.titulo) {
+      errors.titulo = 'O título do vídeo é obrigatório';
+    }
+
+    if(!values.url) {
+      errors.url = 'A URL é obrigatória';
+    }
+
+    if(!values.categoria) {
+      errors.categoria = 'A categoria é obrigatória';
+    }
+
+    return errors;
+  }
+
+  const { handleChange, handleBlur, values, touched, errors, markAllAsTouched, clearForm } = useForm({valoresIniciais, validate});
+  const [categorias, setCategorias] = useState([]);
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     categoriasRepository.getAllWithVideos()
@@ -31,6 +50,12 @@ function CadastroVideo() {
 
   function handleSubmit(event) {
     event.preventDefault();
+
+    markAllAsTouched();
+
+    if(Object.keys(errors).length)
+      return;
+
     setLoader(true);
 
     videosRepository.create({
@@ -60,23 +85,29 @@ function CadastroVideo() {
         <FormField
           label="Título do Vídeo"
           name="titulo"
-          value={values.titulo}
+          onBlur={handleBlur}
           onChange={handleChange}
+          value={values.titulo}
+          error = {touched.titulo && errors.titulo ? errors.titulo : ""} 
         />
 
         <FormField
           label="URL"
           name="url"
-          value={values.url}
+          onBlur={handleBlur}
           onChange={handleChange}
+          value={values.url}
+          error = {touched.url && errors.url ? errors.url : ""} 
         />
 
         <FormField
           type="select"
-          label="Categoria"
           name="categoria"
-          value={values.categoria}
+          label="Categoria"
+          onBlur={handleBlur}
           onChange={handleChange}
+          value={values.categoria}
+          error = {touched.categoria && errors.categoria ? errors.categoria : ""} 
         >
           <option hidden></option>
           {

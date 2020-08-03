@@ -9,13 +9,32 @@ import useForm from '../../../hooks/useForm';
 import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
+
   const valoresIniciais = {
     titulo: '',
     descricao: '',
     cor: '',
   };
 
-  const { handleChange, values, clearForm } = useForm(valoresIniciais);
+  function validate(values) {
+    const errors = {};
+
+    if(!values.titulo) {
+      errors.titulo = 'O nome da categoria é obrigatório';
+    }
+
+    if(!values.descricao) {
+      errors.descricao = 'A descrição é obrigatória';
+    }
+
+    if(!values.cor) {
+      errors.cor = 'A cor é obrigatória';
+    }
+
+    return errors;
+  }
+
+  const { handleChange, handleBlur, values, touched, errors, markAllAsTouched, clearForm } = useForm({valoresIniciais, validate});
   
   const [loader, setLoader] = useState(false);
   const [categorias, setCategorias] = useState([]);
@@ -32,6 +51,12 @@ function CadastroCategoria() {
 
   function handleSubmit(event) {
     event.preventDefault();
+
+    markAllAsTouched();
+    
+    if(Object.keys(errors).length)
+      return;
+
     setLoader(true);
 
     categoriasRepository.create({
@@ -63,27 +88,33 @@ function CadastroCategoria() {
         <FormField
           label="Nome da categoria"
           type="text"
-          name="titulo"
-          value={values.titulo}
+          name="titulo"     
+          onBlur={handleBlur}
           onChange={handleChange}
+          value={values.titulo}
+          error = {touched.titulo && errors.titulo ? errors.titulo : ""} 
         />
 
         <FormField
           label="Descrição"
           type="textarea"
-          name="descricao"
-          value={values.descricao}
+          name="descricao" 
+          onBlur={handleBlur}
           onChange={handleChange}
+          value={values.descricao}
+          error = {touched.descricao && errors.descricao ? errors.descricao : ""} 
         />
-
+        
         <FormField
           label="Cor"
           type="color"
           name="cor"
-          value={values.cor}
+          onBlur={handleBlur}
           onChange={handleChange}
+          value={values.cor}
+          error = {touched.cor && errors.cor ? errors.cor : ""} 
         />
-
+        
       <Button background="darkblue" type="submit">Cadastrar</Button>
       <Button as={Link} to="/">Voltar</Button>
 
